@@ -1,0 +1,252 @@
+*{ /*définit le style global sur l'intégralité de la page peu importe le navigateur(selecteur universel) */
+margin: 0; /* margin = marge extérieure à la boite*/
+padding: 0; /* margin = marge intérieure à la boite*/
+box-sizing: border-box; /* indique que l'on va inclure les marges internes et bordure dans la taille des parents*/
+font-family: poppins;
+}
+
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: aqua;
+}
+
+
+h1{color: brown;
+    text-align: center;
+
+}
+
+.header{
+    display: flex; 
+    justify-content: space-around;
+}
+nav ul li{
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: rgb(160, 49, 49);
+
+}
+
+img{
+    width: 3em;
+    height: 3em;
+}
+
+
+header{
+    background-color: rgb(225, 195, 157);
+
+}
+
+.menu {
+    /* Pour que le menu reste en place quand on scroll */
+   position: fixed;
+   /* Pour que le menu ne soit pas sur le texte et que ce dernier puisse être sélectionné */
+   width: 0px;
+   display: none;
+   }
+
+   #hamburger {
+     /* Pour que la checkbox ne s'affiche pas */
+     display: none;
+   }
+
+   #hamburger-logo {
+     /* Pour que le curseur soit un pointeur */
+     cursor: pointer;
+     background: #cff08d;
+     width: 200px;
+     display: block;
+     color: brown;
+     /* Pour que le menu hamburger s'affiche toujours */
+     text-align: right;
+     /* Pour que le menu hamburger soit "rangé" par défaut */
+     transform: translateX(-168px);
+     padding: 10px;    
+     border-radius: 15%
+
+   }
+   
+   .burgerMenu {
+     display: flex;
+     flex-direction: column;
+     background: brown;
+     border-radius: 13%;
+     overflow: hidden;
+     width: 200px;
+     /* Pour que les liens soient "rangés" par défaut */
+     transform: translateX(-200px);
+   }
+   
+   #hamburger-logo,
+   .burgerMenu {
+     /* Pour qu'il y ait une animation */
+     transition: 0.7s;
+   }
+   
+   /* Lorsque #hamburger est coché, le #hamburger-logo et le nav qui sont dans le même parent changent d'état (ouvert-fermé) */
+   #hamburger:checked ~ #hamburger-logo,
+   #hamburger:checked ~ .burgerMenu {
+     /* Changement de la position pour afficher les menus */
+     transform: translate(0);
+   }
+   
+   .burgerMenu a {
+    color: #cff08d;
+     text-decoration: none;
+     padding: 10px;
+   }
+   
+   .burgerMenu a:hover {
+     background: #444;
+   }
+
+
+main{
+    /* pour inserer une image en fond d'écran dans le main : background-image: url("Image/path-nature.jpg");*/
+    background-color:rgb(207, 240, 141);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.premierpara{
+    color: rgb(0, 5, 9);
+    font-family: roboto;
+}
+
+.deuxpara{
+    color: rgb(247, 140, 0);
+}
+.organiser{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+
+}
+.DescribeImage{
+        width: 25vw;
+        height: 25vw;
+}
+
+.test{
+    width:60em;
+    height:60em;
+    background: linear-gradient(45deg,#8360c3,#2ebf91,#9ebf13);
+    border-radius: 100% 0% 73% 27% / 72% 0% 100% 28%;
+    opacity: 0.6;
+    border: solid; border-width: 50px;
+    border-color: purple;
+    box-shadow: 10px 5px rgba(1, 1, 1, 0.5);
+}
+.orange{
+    width: 150px;
+    height: 75px;
+    background-color: #8360c3;
+    border-color: black;
+    
+}
+button:hover{
+    background-color: antiquewhite;
+}
+
+.containerGrid{
+    display: grid;/*initialise le tableau grid*/
+    grid-template-columns: 1fr 1fr 1fr; /*ici on demande 3 colonnes puisque 3 valeurs*/
+    grid-template-rows: 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px; /*ici 3 lignes puisque 3 valeurs, on peut jouer sur la taille*/
+    gap: 10px; /*espacement tout autour de 10px */
+    
+}
+.containerGrid div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    
+    border: 1px solid black; /*attribuer une taille à la bordure*/
+    border-radius: 5%;
+    background-color: purple;
+}
+
+.one{
+    grid-column: 1/4;
+}
+.two{
+    grid-column: 1/3;
+}
+.three{
+    grid-column: 3/4;
+    grid-row: 2/4;
+}
+.four{
+    grid-column: 1/2;
+}
+.six{
+    grid-column: 1/3;
+}
+.eight{
+    grid-column: 1/4;
+}
+.boxBis{
+    border: 1px solid black; /*attribuer une taille à la bordure*/
+    border-radius: 5%;
+    background-color: rgb(0, 6, 128);
+}
+.oneBis{
+    grid-column: 1/4;
+}
+.twoBis{
+    grid-column: 1/2;
+    grid-row: 7/9;
+}
+.threeBis{
+    grid-column: 2/3;
+}
+.fiveBis{
+    grid-column: 2/4;
+}
+.sixBis{
+    grid-column: 1/4;
+}
+.eightBis{
+    grid-column: 2/4;
+}
+td, th{ /*on peut rassembler td et th et donc on applique la meme chose au tableau et aux titres du tableau*/
+    border: 1px solid black;
+    padding: 20px;
+
+}
+.tableau{
+    border-collapse: collapse;
+    margin: auto; /*permet de mettre une marge dans le tableau*/
+}
+
+@media screen and (max-width: 800px){ /*ici j'agis sur la version tablette/mobile, je ne veux pas que la nav du hearder apparaisse
+    /*insererz vos propriétés CSS ici, avec vos selecteurs. ici ceka signifie que sur tout le css ecrit
+    ne sera appliqué que pour les écrans dont la taille est égale ou inférieure à 800 pixels
+    media screen end signifie on va initier les médias query*/
+    .header{
+        display: none;
+    }
+    .menu{
+        display: block;
+    }
+    .test{
+        width: 30em;
+        height:30em;
+    }    
+}
+
+
+    
+
+
+
