@@ -5,6 +5,17 @@ box-sizing: border-box; /* indique que l'on va inclure les marges internes et bo
 font-family: poppins;
 }
 
+
+/*------------------EFFET PARALLAX------------*/
+.parallax{
+    background-image: url("Image/parallax1.jpg") /*défini mon image de fond*/;
+    height: 100%;/*permet de dire de remplir 100% du conteneur ici le body*/
+    background-attachment: fixed;/*fixe l'image au moment du scroll*/
+    background-position: center;/*centre l'image*/
+    background-repeat: no-repeat;/*empêche la répétition de l'image*/
+    background-size: cover;/*redimensionne l'image  pour couvrir l'intégralité de l'élément*/
+}
+
 a{
     text-decoration: none;
 }
@@ -21,6 +32,10 @@ h1{color: brown;
 .header{
     display: flex; 
     justify-content: space-around;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgb(225, 195, 157);
 }
 nav ul li{
     display: inline;
@@ -39,10 +54,10 @@ img{
 }
 
 
-header{
+/*header{
     background-color: rgb(225, 195, 157);
 
-}
+}*/
 
 .menu {
     /* Pour que le menu reste en place quand on scroll */
@@ -110,9 +125,10 @@ header{
 
 main{
     /* pour inserer une image en fond d'écran dans le main : background-image: url("Image/path-nature.jpg");*/
-    background-color:rgb(207, 240, 141);
+    /*background-color:rgb(207, 240, 141);
     background-repeat: no-repeat;
-    background-size: cover;
+     background-size: cover;*/
+    padding-top: 60px;
     
 }
 
